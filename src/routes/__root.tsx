@@ -77,21 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "لقيمة — مالح وحالي | منيو المطعم" },
+      { name: "description", content: "منيو مطعم لقيمة (مالح وحالي): لقيمات، حلا، سينابون، سمبوسة، مسخن، ورق عنب، جبنية، مكعبات، سميد، بوكسات وأكثر. اطلب الآن عبر واتساب." },
+      { property: "og:title", content: "لقيمة — مالح وحالي | منيو المطعم" },
+      { property: "og:description", content: "منيو مطعم لقيمة (مالح وحالي): لقيمات، حلا، سينابون، سمبوسة، مسخن، ورق عنب، جبنية، مكعبات، سميد، بوكسات وأكثر. اطلب الآن عبر واتساب." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "لقيمة — مالح وحالي | منيو المطعم" },
+      { name: "twitter:description", content: "منيو مطعم لقيمة (مالح وحالي): لقيمات، حلا، سينابون، سمبوسة، مسخن، ورق عنب، جبنية، مكعبات، سميد، بوكسات وأكثر. اطلب الآن عبر واتساب." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/29cfe0bd-0035-4c3d-b86b-1df3dcbeb6f5/id-preview-dc616c2f--eb309245-2fa6-4e7a-b0a5-d7e919c80f11.lovable.app-1783527176664.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/29cfe0bd-0035-4c3d-b86b-1df3dcbeb6f5/id-preview-dc616c2f--eb309245-2fa6-4e7a-b0a5-d7e919c80f11.lovable.app-1783527176664.png" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Rakkas&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -102,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <head>
         <HeadContent />
       </head>
